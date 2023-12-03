@@ -7,6 +7,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "new": "pnpm tsx src/new.ts"
+  },
   "dependencies": {
     "tsx": "^4.6.1"
   },
