@@ -21,27 +21,34 @@ const partTwoStringsFile = readFileSync("./src/day.${day}.2.txt", {
 
 
 const main = async () => {
-    const start = Date.now();
-
     const partOne = (strings = partOneStringsFromFile): number => {
         // Goodmorning handsome, your code goes here.
+        strings;
         return 0;
     }
 
     const partTwo = (strings = partTwoStringsFile): number => {
         // Part one must've been easy.
+        strings;
         return 0;
     }
 
+    let start = Date.now();
+    const partOneResults = partOne();
+    let end = Date.now();
+    const partOneDuration = end - start;
+
+    start = Date.now();
+    const partTwoResults = partTwo();
+    end = Date.now();
+    const partTwoDuration = end - start;
+
     console.table({
-        partOne: partOne(),
-        partTwo: partTwo(),
+        partOne: partOneResults,
+        partOneDuration,
+        partTwo: partTwoResults,
+        partTwoDuration,
     });
-
-    const end = Date.now();
-    const duration = end - start;
-
-    console.log(\`Duration: \${duration}ms\`);
 }
 
 main();
